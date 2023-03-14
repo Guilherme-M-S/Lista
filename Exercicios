@@ -1,0 +1,165 @@
+//Execicio 1
+        System.out.println("Exercicio 1");
+        //A
+        System.out.print("A:");
+        int salario1= 100;  
+        int ir1= 0;
+        int salliq1= 100;
+        System.out.println(salliq1 >= 100); // compara salliq1 com 100
+        
+        //B
+        System.out.print("B:");
+        int salario2= 200;
+        int ir2= 10;
+        int salliq2= 190;
+        System.out.println(salliq2 < 190); // compara salliq2 com 190
+        
+        //C
+        System.out.print("C:");
+        int salario3= 300;
+        int ir3= 15;
+        int salliq3= 285;
+        System.out.println(salliq3 == salario3 + ir3 ); // compara salliq com valor de salario e IR somados
+        
+        
+        //Exercicio 2
+        System.out.println("Exercicio 2");
+        float a2=3f;
+        float b2=7f;
+        float c2=4f;
+        //A
+        System.out.print("A:");
+        System.out.println(a2+c2 > b2); //compara o valor de a2+c2 é maior que b2 e aponta se positivo ou negativo
+        //B
+        System.out.print("B:");
+        System.out.println(b2 >= a2+2); //compara se o valora de b2 é maior ou igual a a2+2 e aponta se positivo ou negativo
+        //C
+        System.out.print("C:");
+        System.out.println(c2 == b2-a2);//compara se c2 tem o mesmo valor de b2-a2 e aponta se positivo ou negativo
+        //D
+        System.out.print("D:");
+        System.out.println(b2+a2 <= c2);//compara se b2+a2 é menor ou igual a c2 e aponta se positivo ou negativo
+        //E
+        System.out.print("E:");
+        System.out.println(c2+a2 > b2); //compara se c2+a2 é maior que b2 e aponta se positivo ou negativo
+        
+        
+        //Exercicio 3
+        System.out.println("Exercicio 3");
+        float a3=5f;
+        float b3=4f;
+        float c3=3f;
+        float d3=6f;
+        //A
+        System.out.print("A:");
+        System.out.println( a3 > c3 && c3 <= d3); //compara se a3 é maior que c3 e se c3 é menor igual a d3
+        //B
+        System.out.print("B:");
+        System.out.println( a3+b3 > 10  || a3+b3 == c3+d3 );//compara se a3+b3 é maior que 10 ou se a3+b3 é igual a c3+d3
+        //C
+        System.out.print("C:");
+        System.out.println(a3 >= c3 && d3>= c3);//compara se a3 é maior igual a c3 e se d3 é maior igual a c3
+        
+        
+        //Exercicio 4
+        System.out.println("Exercicio 4");
+        System.out.print("Digite um número: ");
+        Scanner scanner4 = new Scanner(System.in);//le o numero inteiro
+        float numero = scanner4.nextFloat();//define a variavel numero
+        System.out.print("Número é par? ");
+        System.out.println( numero % 2 == 0);//divide a variavel numero por 2 e compara o resto a 0
+        System.out.print("O número é positivo? ");
+        System.out.println(numero >= 0);// diz se numero é maior ou igual a zero
+        
+        //Exercicio 5
+        System.out.println("Exercicio 5");
+        System.out.println("Digite sua altura(ex: 1,65 ): ");
+        Scanner scanner5 = new Scanner(System.in);
+        float altura5= scanner5.nextFloat();// define a variavel altura5
+        //A
+        System.out.print("Peso ideal caso Homem é de: ");
+        System.out.println((72.7*altura5)-58);// calcula o IMC para homens
+        //B
+        System.out.println("Peso ideal caso Mulher é de:");
+        System.out.println((62.1*altura5)-44.7);// calcula o IMC para mulheres
+        
+        //Exercicio 6
+        
+        System.out.println("Exercicio 6");
+        System.out.print("Digite o peso de peixes do dia: ");
+        Scanner scanner6= new Scanner(System.in);
+        float pesodia= scanner6.nextFloat();// define variavel pesodia
+        float multa = (pesodia-50)*4;   // define a variavel multa (valor da multa)
+         if( multa < 0 ){               // compara multa se menor que zero, caso seja diz que nao havera multa
+            System.out.println("Não haverá multa.");
+         }else{                         // caso seja maior que zero, diz o valor da multa
+            System.out.println("A multa será: " + multa);
+        }
+        
+        
+        
+        //Exercicio 7
+        System.out.println("Exercicio 7");
+          Scanner scanner7= new Scanner(System.in);
+        
+        System.out.print("Digite seu nome: ");
+        String nome = scanner7.next();// define a variavel nome
+        System.out.print("Escreva o seu sexo (M/F): ");
+        String sexo = scanner7.next();// define a variavel sexo
+        System.out.print("Escreva sua idade: ");
+        float idade = scanner7.nextFloat();// define a variavel idade
+        System.out.print("Escreva sua quantidade de hemoglobina g/gL: ");
+        float hemo= scanner7.nextFloat();// define a variavel hemo
+        if( idade >= 2 && idade <=6){   // compara a idade da criança
+            //FAZER TESTE CRIANCA 2 A 6 ANOS
+            if( hemo >= 11.5 && hemo <= 13.5 ){// caso criança entre 2 e 6 anos, compara a hemoglobina permitida
+                System.out.println("Tudo dentro dos conformes.");
+            }else{// caso fora do permitido, avisa fora do comum
+                System.out.println("O numero de hemoglobinas esta fora do comum.");
+            }    
+        }
+        else if(idade >= 6 && idade <=12 ){// caso nao se encaixe com idade anterior testa novamente a idade
+            //FAZER TESTE CRIANCA 6 A 12 ANOS
+            if( hemo >= 11.5 && hemo <= 15.5 ){//caso criança entre 6 a 12anos , compara a hemoglobina permitida
+                System.out.println("Tudo dentro dos conformes.");
+            }else{// caso fora do permitido, avisa fora do comum
+                System.out.println("O numero de hemoglobinas esta fora do comum.");
+            }        
+        }else if(idade > 12){// caso seja maior que 12 anos, define como Homem ou Mulher
+            //FAZER TESTE NO ADULTO(ACIMA DE 12 ANOS)
+            if( sexo.equals("M") | sexo.equals("m") ){//Testa se homem
+                //Sexo Masculino
+            if( hemo >= 14 && hemo <= 18 ){//caso homem, testa a hemoglobina permitida
+                System.out.println("Tudo dentro dos conformes.");
+            }else{//caso fora do normal, avisa fora do comum
+                System.out.println("O numero de hemoglobinas esta fora do comum.");
+            }
+                
+            }else{
+                //Sexo Feminino
+            if( hemo >= 12 && hemo <= 16 ){//caso nao seja homem e definido como mulher e entao testa a hemoglobina permitida
+                System.out.println("Tudo dentro dos conformes.");
+            } else{// caso fora do permitido, avisa fora do comum
+                System.out.println("O numero de hemoglobinas esta fora do comum.");
+             }
+            }
+        }else{
+            System.out.println("Muito novo para o exame.");
+        }
+        
+        
+        //Exercicio 8
+        
+        System.out.println("Exercicio 8");
+        System.out.print("Escreva o seu tipo sanguineo(A+, A-, B+, B-, AB+, AB-,O+ ou O-): ");
+        Scanner scanner8= new Scanner(System.in);
+        String sangue= scanner8.next();//define a variavel sangue
+        //Testa os inumeros tipos sanguineos e aponta quais doacoes possiveis para receber ou realizar
+        if(sangue.equals("A+")){ System.out.println("Este paciente pode receber: A+,A-,O+ e O-");}
+        else if(sangue.equals("A-")){System.out.println("Este paciente pode receber: A- e O-");}
+        else if(sangue.equals("B+")){System.out.println("Este paciente pode receber: B+,B-,O+ e O-");}
+        else if(sangue.equals("B-")){System.out.println("Este paciente pode receber: B- e O-");}
+        else if(sangue.equals("AB+")){System.out.println("Este paciente pode receber: Todos os tipos");}
+        else if(sangue.equals("AB-")){System.out.println("Este paciente pode receber: A-,B-,O- e AB-");}
+        else if(sangue.equals("O+")){System.out.println("Este paciente pode receber: O+ e O-");}
+        else if(sangue.equals("O-")){System.out.println("Este paciente pode receber: O-");} 
